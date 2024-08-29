@@ -1,13 +1,577 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+:root{
+  font-family: "Inter",san-serif;
+ 
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.about-containers {
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  justify-content: center;
+  align-items: center;
+}
+.project-link {
+  text-decoration: none;
+  color: inherit; /* Inherit color from parent */
+}
+
+.project-link:hover {
+  text-decoration: none; /* Ensure no underline on hover */
+}
+
+.contact-info p {
+  margin: 0;           /* Remove default margin */
+  padding: 5px 0;      /* Add some padding for spacing */
+  font-size: 16px;     /* Set a comfortable font size */
+  color:aliceblue;         /* Dark gray text color */
+  text-decoration: none; /* Ensure no underline is applied */
+}
+
+.contact-info p:hover {
+  color: #007bff;      /* Change color on hover for interactivity */
+  text-decoration: none; /* Ensure underline does not appear on hover */
+}
+
+.project-details-left {
+  color: white;
+  justify-content: center;
+  flex: 1;
+  text-align: left; /* Align text to the left */
+  padding-right: 50px; /* Add padding between the image and text */
+  margin-left: 30px;
+}
+
+.project-image-right {
+  flex: 1;
+  max-width: 400px; /* Limit the image size */
+  margin-left: 20px; /* Add space between the image and text */
+}
+
+.technology-list {
+  list-style: none;
+  padding: 0;
+}
+
+.technology-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.technology-name {
+  margin-left: 10px; /* Space between icon and technology name */
+}
+
+.icon-react,
+.icon-next,
+.icon-nodejs,
+.icon-mongodb,
+.icon-html,
+.icon-css,
+.icon-bootstrap,
+.icon-express,
+.icon-Cplus {
+  color: #4CAF50; /* Set a default color for icons */
+  font-size: 24px; /* Set icon size */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .project {
+    flex-direction: column; /* Stack image and text on smaller screens */
+  }
+
+  .project-details-left {
+    text-align: center; /* Center text on smaller screens */
+    padding-right: 0;
+  }
+
+  .project-image-right {
+    margin-left: 0;
+    margin-bottom: 20px; /* Add space below the image */
+  }
+}
+
+
+
+.icon-react {
+  color: cyan;
+  font-size: 24px;
+  margin-right: 8px;
+  animation: pulse 1.5s infinite;
+}
+
+.icon-nodejs {
+  color: green;
+  font-size: 24px;
+  margin-right: 8px;
+  animation: pulse 1.5s infinite;
+}
+
+.icon-mongodb {
+  color: green;
+  font-size: 24px;
+  margin-right: 8px;
+  animation: pulse 1.5s infinite;
+}
+
+.icon-html {
+  color: #E34F26;
+  font-size: 24px;
+  margin-right: 8px;
+  animation: pulse 1.5s infinite;
+}
+
+.icon-css {
+  color: #1572B6;
+  font-size: 24px;
+  margin-right: 8px;
+  animation: pulse 1.5s infinite;
+}
+
+.icon-bootstrap {
+  color: #563D7C;
+  font-size: 24px;
+  margin-right: 8px;
+  animation: pulse 1.5s infinite;
+}
+
+.icon-express {
+  color: #000000;
+  font-size: 24px;
+  margin-right: 8px;
+  animation: pulse 1.5s infinite;
+}
+.icon-next {
+  color: #000000;
+  font-size: 24px;
+  margin-right: 8px;
+  animation: rotate 2s linear infinite;
+  animation: pulse 1.5s infinite;
+}
+.icon-C {
+  color: #000000;
+  font-size: 24px;
+  margin-right: 8px;
+  animation: rotate 2s linear infinite;
+  animation: pulse 1.5s infinite;
+}
+.icon-Cplus {
+  color: blue;
+  font-size: 24px;
+  margin-right: 8px;
+  animation: rotate 2s linear infinite;
+  animation: pulse 1.5s infinite;
+}
+
+
+
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+.technology-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; /* Spacing between technology items */
+  justify-content: center;
+}
+
+.technology-item {
+  display: flex;
+  align-items: center;
+  color: aliceblue;
+}
+
+.technology-item svg {
+  font-size: 2rem; /* Adjust icon size */
+  margin-right: 0.5rem;
+}
+
+.technology-name {
+  font-size: 1rem; /* Adjust text size */
+}
+.tech {
+  display: flex;                /* Enables flexbox layout */
+  flex-direction: column;       /* Stacks items vertically */
+  justify-content: center;      /* Centers items vertically */
+  align-items: center;          /* Centers items horizontally */
+  height: 100vh;                /* Makes the container take up the full viewport height */
+  border-bottom: 1px solid #262626; /* Corresponds to Tailwind's `border-neutral-800` */
+  padding-bottom: 8rem;         /* Equivalent to `pb-24` in Tailwind */
+}
+.about-container {
+  display: flex;
+  flex-direction: column; /* Stacks the title and the content vertically */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  text-align: center; /* Centers the text inside the container */
+}
+.experience-paragraph {
+  color: aliceblue;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+  text-align: justify;
+  margin: 0 auto;
+  padding: 30px 0 0 0;
+  font-size: smaller;
+  width: 100%;
+  max-width: 400px;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .about {
+    font-size: 1.8rem;
+  }
+
+  .experience-paragraph {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    font-size: 1.5rem;
+  }
+
+  .experience-paragraph {
+    font-size: 0.9rem;
+  }
+}
+
+.about {
+  color: aliceblue;
+  padding-top: 10px;
+  font-size: 2rem;
+  margin-bottom: 2rem; /* Adds space between the title and the content below */
+}
+.content-wrapper {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap to the next line on smaller screens */
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  margin: 20px; /* Adjust margin as needed */
+}
+
+.image-container img {
+  max-width: 50%; /* Ensures the image takes up full width of the container */
+  height: auto;
+  border-radius: 20px;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .flex-container {
+    flex-direction: row;
+  }
+}
+
+
+
+
+.icon-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem; /* Adds space between icons */
+  margin-top: 40px;
+}
+
+.icon-container div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem; /* Adjust the size of the icons */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+.icon:hover {
+  transform: scale(1.2); /* Slightly enlarge the icon on hover */
+ 
+}
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);   /* Original position */
+  }
+  50% {
+    transform: translateY(-10px); /* Float up */
+  }
+}
+
+.icon-container div {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .icon {
+    font-size: 3rem; /* Smaller icon size on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .icon {
+    font-size: 2rem; /* Even smaller icon size on very small screens */
+  }
+}
+
+
+.text-container {
+  color: aliceblue;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+  text-align: justify;
+  margin: 0 auto;
+  padding: 30px 0 0 0;
+  font-size: smaller;
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin-right: 400px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column; /* Stack image and text vertically */
+  }
+  
+  .image-container, 
+  .text-container {
+    
+    text-align: left;
+    padding: 0;
+    margin-right: 0;
+    margin-left: 2rem;
+  }
+}
+
+.background {
+  background: radial-gradient(
+    ellipse 80% 80% at 50% -20%, 
+    rgba(120, 119, 198, 0.3), 
+    rgba(11, 10, 10, 0)
+  );
+}
+@keyframes shake-up-down {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateY(-5px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateY(5px);
+  }
+}
+
+.shake-text {
+  display: inline-block;
+  animation: shake-up-down 4s ease-in-out;
+  animation-delay: 4s;
+  animation-iteration-count: infinite;
+}
+
+.text {
+  color: aliceblue;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.pic img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 50%;
+}
+
+@media (min-width: 768px) {
+  .text {
+    text-align: left;
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+
+  .pic img {
+    max-width: 400px;
+  }
+}
+
+/* Heading styles */
+.BACK {
+  color: aliceblue;
+  font-size: 2rem;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .BACK {
+    margin-top: 4rem;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    margin-left: 3rem;
+  }
+}
+
+/* Developer title styles */
+.dev {
+  background: linear-gradient(to right, #fbcfe8, #cbd5e1, #c084f5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: -0.015em;
+  margin-left: 2rem;
+  margin-top: 0;
+}
+
+@media (min-width: 1024px) {
+  .dev {
+    margin-left: 3rem;
+  }
+}
+
+/* Paragraph styles */
+.graph {
+  color: aliceblue;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+  text-align: justify;
+  margin: 0 auto;
+  padding: 30px 0 0 0;
+  font-size: smaller;
+  width: 100%;
+  max-width: 400px;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .graph {
+    text-align: left;
+    padding: 0;
+    margin-right: 0;
+    margin-left: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .graph {
+    font-size: 1rem;
+    margin-left: 3rem;
+  }
+}
+.flex-container .text {
+  flex: 1;
+  text-align: left;
+}
+
+.flex-container .pic {
+  flex: 1;
+  text-align: right;
+  padding-top: 100px;
+ 
+}
+
+.pic img {
+  max-width: 50%; /* Makes the image smaller */
+  height: auto;
+  border-radius: 50%; /* Optional: makes the image circular */
+  margin-right: 200px;
+  
+}
+
+
+
+
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  
+  position: relative;
+}
+
+/* Booali text */
+.navbar .booali {
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem; /* Smaller size */
+  position: absolute;
+  transform: rotate(30deg);
+  left: 10px;  /* Adjust this value to move further left */
+  top: 20px;   /* Adjust this value to move it vertically */
+}
+
+/* Social icons */
+.navbar .social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-left: auto; /* Pushes the icons to the right */
+  margin-right: 2rem;
+  font-size: 2rem;
+}
+
+.navbar .social-icons .icons {
+  color: white;
 }
