@@ -495,6 +495,7 @@
   color: aliceblue;
   line-height: 1.6;
   letter-spacing: 0.02em;
+  word-spacing: 0.1em; /* Add word-spacing for consistency */
   text-align: justify;
   margin: 0 auto;
   padding: 30px 0 0 0;
@@ -502,23 +503,51 @@
   width: 100%;
   max-width: 400px;
   display: block;
+  -webkit-font-smoothing: antialiased; /* Smoother text rendering */
+  -moz-osx-font-smoothing: grayscale; /* Smoother text rendering on Firefox */
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .graph {
-    text-align: left;
-    padding: 0;
-    margin-right: 0;
-    margin-left: 2rem;
+    font-size: 0.9rem; /* Adjust font size for mobile */
+    padding: 20px 10px; /* Adjust padding for mobile for better spacing */
+    line-height: 1.6; /* Keep line-height consistent */
+    letter-spacing: 0.02em; /* Keep letter-spacing consistent */
+    word-spacing: 0.1em; /* Keep word-spacing consistent */
+    text-align: justify; /* Ensure text remains justified */
+    -webkit-font-smoothing: antialiased; /* Smoother text rendering */
+    -moz-osx-font-smoothing: grayscale; /* Smoother text rendering on Firefox */
+    flex-wrap: wrap; 
   }
 }
 
-@media (min-width: 1024px) {
+
+
+/* Adjustments for mobile view */
+@media (max-width: 768px) {
+  .hero-container {
+    padding: 0 1rem; /* Adjust padding for mobile */
+  }
+
+  .flex-container {
+    flex-direction: column; /* Stack items vertically on mobile */
+    text-align: center; /* Center text on mobile */
+  }
+
+  .text {
+    margin: 0 auto; /* Center text container */
+  }
+
+  .pic {
+    margin-top: 1rem; /* Add space between text and image */
+    text-align: center; /* Center the image */
+  }
+
   .graph {
-    font-size: 1rem;
-    margin-left: 3rem;
+    font-size: 0.9rem; /* Adjust font size for better readability on smaller screens */
   }
 }
+
 .flex-container .text {
   flex: 1;
   text-align: left;
