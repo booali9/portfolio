@@ -475,19 +475,17 @@
 
 /* Developer title styles */
 .dev {
-  background: linear-gradient(to right, #fbcfe8, #cbd5e1, #c084f5);
+  background: linear-gradient(to right, #730a45, #cbd5e1, #c084f5);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   letter-spacing: -0.015em;
-  margin-left: 2rem;
-  margin-top: 0;
+ 
+  
 }
 
 @media (min-width: 1024px) {
-  .dev {
-    margin-left: 3rem;
-  }
+  
 }
 
 /* Paragraph styles */
