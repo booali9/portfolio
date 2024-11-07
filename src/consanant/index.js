@@ -11,14 +11,14 @@ export const EXPERIENCES = [
   {
     description:"Although I am at the beginning of my professional journey, I have honed my skills in a variety of modern technologies. I have a solid understanding of frontend development with HTML, CSS, and JavaScript, and I am proficient in frameworks like React and Next.js. My backend skills include working with Node.js and MongoDB, and I have experience with TypeScript for developing scalable and maintainable code. Additionally, I am well-versed in foundational programming languages such as C and C++, which have provided me with a strong base in computer science principles. I am eager to apply my technical knowledge in real-world projects and contribute to a dynamic team."
   },
-  /*{
-    year: "2023 - Present",
-    role: "Senior Full Stack Developer",
-    company: "Google Inc.",
-    description: `Led a team in developing and maintaining web applications using JavaScript, React.js, and Node.js. Implemented RESTful APIs and integrated with MongoDB databases. Collaborated with stakeholders to define project requirements and timelines.`,
-    technologies: ["Javascript", "React.js", "Next.js", "mongoDB"],
-  },
   {
+    year: "2024 - Present",
+    role: "Junior Full Stack Developer",
+    company: "Pals Innovatios",
+    description: `Junior developer in a team in developing and maintaining web applications using JavaScript, React.js, and Node.js. `,
+    technologies: ["Javascript", "React.js", "Next.js", "mongoDB","Nodejs"],
+  },
+ /* {
     year: "2022 - 2023",
     role: "Frontend Developer",
     company: "Adobe",
